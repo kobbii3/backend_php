@@ -1,7 +1,8 @@
 <?php
 require_once 'Persona.php';
+require_once 'Info.php';
 
-class Empleado extends Persona{
+class Empleado extends Persona implements Info{
      private $numeroEmpleado;
      private $salario;
 
@@ -34,4 +35,11 @@ class Empleado extends Persona{
 
           return $this;
      }
+
+     public function getInformacion(){
+        return "Empleado: ". $this->getNombre()."<br>"." Numero de empleado: ". $this->getNumeroEmpleado();
+     }
+    public function mostrarInformacion(){
+        echo $this->getInformacion();
+    }
 }

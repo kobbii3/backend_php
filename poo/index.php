@@ -13,4 +13,6 @@ echo "Nombre: ", $persona->getNombre(), ", Edad: ", $persona->getEdad(), ", Gene
 echo "<h2>Instancia Empleado</h2>";
 
 $empleado = new Empleado("Fabian", 24, "Masculino", "E001", 5000000);
-echo "Numero ", $empleado->getNumeroEmpleado();
+echo "Numero ", $empleado->getNumeroEmpleado()."<br>";
+
+$empleado->mostrarInformacion();
